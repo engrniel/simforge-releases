@@ -13,7 +13,7 @@ is out, and does nothing if you are already up to date.
 **Windows 10/11** — open **PowerShell** (Start menu → type `PowerShell`) and run:
 
 ```powershell
-irm https://raw.githubusercontent.com/Niel-TCH/simforge-releases/main/update.ps1 | iex
+irm https://raw.githubusercontent.com/engrniel/simforge-releases/main/update.ps1 | iex
 ```
 
 SimForge goes into `%LOCALAPPDATA%\Programs\SimForge`, with shortcuts on the
@@ -22,7 +22,7 @@ Desktop and in the Start Menu. No admin rights needed.
 **macOS (Apple Silicon, M1 or newer)** — open **Terminal** and run:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Niel-TCH/simforge-releases/main/update.sh | bash
+curl -fsSL https://raw.githubusercontent.com/engrniel/simforge-releases/main/update.sh | bash
 ```
 
 SimForge goes into `/Applications` (or `~/Applications` if you are not an admin).
@@ -43,7 +43,7 @@ Save your work before updating: the updater closes SimForge if it is open.
 
 ## Manual download
 
-Every release on the [Releases page](https://github.com/Niel-TCH/simforge-releases/releases)
+Every release on the [Releases page](https://github.com/engrniel/simforge-releases/releases)
 has `SimForge-win-x64.zip` (unzip, keep the files together, run `SimForge.exe`)
 and `SimForge-macos-arm64.dmg`. Both builds are unsigned: on Windows click
 **More info → Run anyway**; on macOS right-click the app → **Open** the first time.

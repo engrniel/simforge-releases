@@ -2,7 +2,7 @@
 #
 # Students run ONE line in PowerShell (no admin rights needed):
 #
-#   irm https://raw.githubusercontent.com/Niel-TCH/simforge-releases/main/update.ps1 | iex
+#   irm https://raw.githubusercontent.com/engrniel/simforge-releases/main/update.ps1 | iex
 #
 # It installs SimForge on first run and updates it on every later run:
 #   1. reads the latest version from the public simforge-releases repo,
@@ -24,7 +24,7 @@
     # Windows PowerShell 5.1 still defaults to TLS 1.0, which GitHub refuses.
     [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
-    $Repo   = "Niel-TCH/simforge-releases"
+    $Repo   = "engrniel/simforge-releases"
     $Base   = "https://github.com/$Repo/releases/latest/download"
     $Dir    = Join-Path $env:LOCALAPPDATA "Programs\SimForge"
     $Stamp  = Join-Path $Dir "version.txt"

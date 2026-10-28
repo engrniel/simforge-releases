@@ -4,7 +4,7 @@
 #
 # Students run ONE line in Terminal:
 #
-#   curl -fsSL https://raw.githubusercontent.com/Niel-TCH/simforge-releases/main/update.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/engrniel/simforge-releases/main/update.sh | bash
 #
 # It installs SimForge on first run and updates it on every later run: reads
 # the latest version, stops if it is already installed, quits SimForge,
@@ -19,7 +19,7 @@
 
 set -euo pipefail
 
-REPO="Niel-TCH/simforge-releases"
+REPO="engrniel/simforge-releases"
 BASE="https://github.com/$REPO/releases/latest/download"
 
 echo ""
