@@ -23,7 +23,9 @@ jobs:
       - name: Check installed files, version and shortcut
         run: |
           $dir = Join-Path $env:LOCALAPPDATA "Programs\SimForge"
-          $want = ((Invoke-WebRequest "https://github.com/engrniel/simforge-releases/releases/latest/download/version.txt" -UseBasicParsing).Content | Out-String).Trim()
+          $want = (Invoke-WebRequest "https://github.com/engrniel/simforge-releases/releases/latest/download/version.txt" -UseBasicParsing).Content
+          if ($want -is [byte[]]) { $want = [Text.Encoding]::UTF8.GetString($want) }
+          $want = $want.Trim()
           $got = (Get-Content (Join-Path $dir "version.txt") -Raw).Trim()
           Write-Host "latest=$want installed=$got"
           if ($got -ne $want) { throw "version mismatch" }
